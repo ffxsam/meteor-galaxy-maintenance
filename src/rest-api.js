@@ -1,11 +1,10 @@
+import { Meteor } from 'meteor/meteor';
 import { WebApp } from 'meteor/webapp';
 import { GalaxyIncidents } from './collection';
 
 WebApp.connectHandlers.use('/api/galaxyStatus', function (req, res, next) {
   req.on('data', Meteor.bindEnvironment(chunk => {
     const data = JSON.parse(chunk);
-
-    // Things we care about
 
     const {
       incident: {
@@ -20,7 +19,6 @@ WebApp.connectHandlers.use('/api/galaxyStatus', function (req, res, next) {
     const scheduledFor = new Date(scheduled_for);
     const scheduledUntil = new Date(scheduled_until);
     const updatedAt = new Date(updated_at);
-    /* eslint-enable camelcase */
 
     if (status !== 'completed') {
       GalaxyIncidents.upsert({ incidentId: id }, {

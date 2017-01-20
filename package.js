@@ -1,6 +1,6 @@
 Package.describe({
   name: 'ffxsam:galaxy-maintenance',
-  version: '0.7.0',
+  version: '0.7.1',
   // Brief, one-line summary of the package.
   summary: 'Galaxy maintenance tracking',
   // URL to the Git repository containing the source code for this package.

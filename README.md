@@ -49,6 +49,10 @@ A typical document in `galaxyIncidents` might look like this:
 
 When Galaxy (StatusPage, actually) sends out an update with a status of `"completed"`, the incident in question will automatically be removed from the collection.
 
+## Caveats
+
+This seems to not work when added to a project that uses `meteorhacks:picker`. This might also apply to other REST API packages. When in doubt, use Meteor's built-in `webapp` package which plays nicely with this one.
+
 ## Contributing
 
 Please feel free to contribute and improve this package!
