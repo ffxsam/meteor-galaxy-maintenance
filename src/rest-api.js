@@ -10,6 +10,7 @@ WebApp.connectHandlers.use('/api/galaxyStatus', function (req, res, next) {
       incident: {
         id,
         impact,
+        name,
         scheduled_for,
         scheduled_until,
         status,
@@ -24,6 +25,7 @@ WebApp.connectHandlers.use('/api/galaxyStatus', function (req, res, next) {
       GalaxyIncidents.upsert({ incidentId: id }, {
         impact,
         incidentId: id,
+        name,
         scheduledFor,
         scheduledUntil,
         status,
