@@ -6,10 +6,10 @@ Meteor.publish('galaxyIncidents', function ({ region }) {
 
   switch (region) {
     case 'US':
-      selector = { name: /^\[US\]/ },
+      selector.name = /^\[US\]/;
       break;
     case 'EU':
-      selector = { name: /^\[EU\]/ },
+      selector.name = /^\[EU\]/;
       break;
     default:
       break;
